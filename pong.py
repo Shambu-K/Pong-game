@@ -3,6 +3,7 @@
 from logging.config import listen
 import turtle
 import os
+# import winsound         #for windows
 
 window =  turtle.Screen()
 window.title(" PONG Game")
@@ -98,18 +99,23 @@ while True:
         ball.sety(290)
         ball.moveY*= -1
         os.system("aplay bounce.wav&")
+        # winsound.PlaySound("bounce.wav", winsound.SND_ASYNC)  #FOR WINDOWS
 
 
     if(ball.ycor() < -290):
         ball.sety(-290)
         ball.moveY*= -1
         os.system("aplay bounce.wav&")
+        # winsound.PlaySound("bounce.wav", winsound.SND_ASYNC)  #FOR WINDOWS
+
 
     
     if(ball.xcor() > 390):
         ball.goto(0,0)
         ball.moveX*= -1
         os.system("aplay beat.wav&")
+        # winsound.PlaySound("beat.wav", winsound.SND_ASYNC)  #FOR WINDOWS
+
         score_a+= 1
         pen.clear()
         pen.write("Player A: {} Player B: {}".format(score_a, score_b), align = "center", font = ("Vendana", 24, "normal"))
@@ -119,6 +125,7 @@ while True:
         ball.goto(0,0)
         ball.moveX*= -1
         os.system("aplay beat.wav&")
+        # winsound.PlaySound("beat.wav", winsound.SND_ASYNC)  #FOR WINDOWS
         score_b+= 1
         pen.clear()
         pen.write("Player A: {} Player B: {}".format(score_a, score_b), align = "center", font = ("Vendana", 24, "normal"))
@@ -129,6 +136,8 @@ while True:
         ball.setx(340)
         ball.moveX*= -1
         os.system("aplay bounce.wav&")
+        # winsound.PlaySound("bounce.wav", winsound.SND_ASYNC)  #FOR WINDOWS
+
 
         
 
@@ -137,6 +146,8 @@ while True:
         ball.setx(-340)
         ball.moveX*= -1
         os.system("aplay bounce.wav&")
+        # winsound.PlaySound("bounce.wav", winsound.SND_ASYNC)  #FOR WINDOWS
+
 
     #result
     if(score_a == 10):
@@ -148,6 +159,7 @@ while True:
 
     if(score_b == 10):
         os.system("aplay victory.wav&")
+        # winsound.PlaySound("victory.wav", winsound.SND_ASYNC)  #FOR WINDOWS
         pen.clear()
         pen.goto(0, 0)
         pen.write("Player B wins", align = "center", font = ("Comic Sans", 40, "normal"))
