@@ -139,14 +139,14 @@ while True:
         os.system("aplay bounce.wav&")
 
     #result
-    if(score_a == 1):
+    if(score_a == 10):
         os.system("aplay victory.wav&")
         pen.clear()
         pen.goto(0, 0)
         pen.write("Player A wins", align = "center", font = ("Comic Sans", 40, "normal"))
         window.exitonclick()
 
-    if(score_b == 1):
+    if(score_b == 10):
         os.system("aplay victory.wav&")
         pen.clear()
         pen.goto(0, 0)
