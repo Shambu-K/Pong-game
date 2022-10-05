@@ -2,7 +2,7 @@
 
 from logging.config import listen
 import turtle
-import os                 #for linux
+import os                 #for linux and mac
 # import winsound         #for windows
 
 window =  turtle.Screen()
@@ -99,7 +99,7 @@ while True:
         ball.sety(290)
         ball.moveY*= -1
         os.system("aplay bounce.wav&")                          #FOR LINUX
-        # os.system("afplay bounce.wav&")                          #FOR MAC
+        # os.system("afplay bounce.wav&")                       #FOR MAC
         # winsound.PlaySound("bounce.wav", winsound.SND_ASYNC)  #FOR WINDOWS
 
 
@@ -107,7 +107,7 @@ while True:
         ball.sety(-290)
         ball.moveY*= -1
         os.system("aplay bounce.wav&")                          #FOR LINUX
-        # os.system("afplay bounce.wav&")                          #FOR MAC
+        # os.system("afplay bounce.wav&")                       #FOR MAC
         # winsound.PlaySound("bounce.wav", winsound.SND_ASYNC)  #FOR WINDOWS
 
 
@@ -116,7 +116,7 @@ while True:
         ball.goto(0,0)
         ball.moveX*= -1
         os.system("aplay beat.wav&")                          #FOR LINUX
-        # os.system("afplay bounce.wav&")                       #FOR MAC
+        # os.system("afplay bounce.wav&")                     #FOR MAC
         # winsound.PlaySound("beat.wav", winsound.SND_ASYNC)  #FOR WINDOWS
 
         score_a+= 1
@@ -128,7 +128,7 @@ while True:
         ball.goto(0,0)
         ball.moveX*= -1         
         os.system("aplay beat.wav&")                          #FOR LINUX
-        # os.system("afplay bounce.wav&")                          #FOR MAC
+        # os.system("afplay bounce.wav&")                     #FOR MAC
         # winsound.PlaySound("beat.wav", winsound.SND_ASYNC)  #FOR WINDOWS
         score_b+= 1
         pen.clear()
@@ -140,7 +140,7 @@ while True:
         ball.setx(340)
         ball.moveX*= -1
         os.system("aplay bounce.wav&")                          #FOR LINUX
-        # os.system("afplay bounce.wav&")                          #FOR MAC
+        # os.system("afplay bounce.wav&")                       #FOR MAC
         # winsound.PlaySound("bounce.wav", winsound.SND_ASYNC)  #FOR WINDOWS
 
 
@@ -151,12 +151,15 @@ while True:
         ball.setx(-340)
         ball.moveX*= -1
         os.system("aplay bounce.wav&")                          #FOR LINUX
+        # os.system("afplay bounce.wav&")                       #FOR MAC
         # winsound.PlaySound("bounce.wav", winsound.SND_ASYNC)  #FOR WINDOWS
 
 
     #result
     if(score_a == 10):
-        os.system("aplay victory.wav&")
+        os.system("aplay victory.wav&")                             #FOR LINUX
+        # os.system("afplay victory.wav&")                          #FOR MAC
+        # winsound.PlaySound("victory.wav", winsound.SND_ASYNC)     #FOR WINDOWS
         pen.clear()
         pen.goto(0, 0)
         pen.write("Player A wins", align = "center", font = ("Comic Sans", 40, "normal"))
@@ -164,6 +167,7 @@ while True:
 
     if(score_b == 10):
         os.system("aplay victory.wav&")                          #FOR LINUX
+        # os.system("afplay victory.wav&")                       #FOR MAC
         # winsound.PlaySound("victory.wav", winsound.SND_ASYNC)  #FOR WINDOWS
         pen.clear()
         pen.goto(0, 0)
