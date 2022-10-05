@@ -1,7 +1,11 @@
-# Pong-game
-Making the classic pong game using python
 
-**To Play the Game:**
-Clone this repository
-  * https://github.com/Shambu-K/Pong-game.git
-Run the python file and enjoy the game:)
+# To Play the Game:
+* Make sure that you have python3 installed in your system
+
+* Clone this repository <br />
+   ```  git clone https://github.com/Shambu-K/Pong-game.git```
+   
+* Run the python file <br />
+   ```  python3 pong.py```
+
+**Enjoy your game :)**
