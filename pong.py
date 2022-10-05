@@ -2,7 +2,7 @@
 
 from logging.config import listen
 import turtle
-import os
+import os                 #for linux
 # import winsound         #for windows
 
 window =  turtle.Screen()
@@ -98,14 +98,16 @@ while True:
     if(ball.ycor() > 290):
         ball.sety(290)
         ball.moveY*= -1
-        os.system("aplay bounce.wav&")
+        os.system("aplay bounce.wav&")                          #FOR LINUX
+        # os.system("afplay bounce.wav&")                          #FOR MAC
         # winsound.PlaySound("bounce.wav", winsound.SND_ASYNC)  #FOR WINDOWS
 
 
     if(ball.ycor() < -290):
         ball.sety(-290)
         ball.moveY*= -1
-        os.system("aplay bounce.wav&")
+        os.system("aplay bounce.wav&")                          #FOR LINUX
+        # os.system("afplay bounce.wav&")                          #FOR MAC
         # winsound.PlaySound("bounce.wav", winsound.SND_ASYNC)  #FOR WINDOWS
 
 
@@ -113,7 +115,8 @@ while True:
     if(ball.xcor() > 390):
         ball.goto(0,0)
         ball.moveX*= -1
-        os.system("aplay beat.wav&")
+        os.system("aplay beat.wav&")                          #FOR LINUX
+        # os.system("afplay bounce.wav&")                       #FOR MAC
         # winsound.PlaySound("beat.wav", winsound.SND_ASYNC)  #FOR WINDOWS
 
         score_a+= 1
@@ -123,8 +126,9 @@ while True:
     
     if(ball.xcor() < -390):
         ball.goto(0,0)
-        ball.moveX*= -1
-        os.system("aplay beat.wav&")
+        ball.moveX*= -1         
+        os.system("aplay beat.wav&")                          #FOR LINUX
+        # os.system("afplay bounce.wav&")                          #FOR MAC
         # winsound.PlaySound("beat.wav", winsound.SND_ASYNC)  #FOR WINDOWS
         score_b+= 1
         pen.clear()
@@ -135,7 +139,8 @@ while True:
     if (ball.xcor() > 340 and ball.xcor() < 350) and (ball.ycor() < paddle_b.ycor() + 50 and ball.ycor() > paddle_b.ycor() - 50):
         ball.setx(340)
         ball.moveX*= -1
-        os.system("aplay bounce.wav&")
+        os.system("aplay bounce.wav&")                          #FOR LINUX
+        # os.system("afplay bounce.wav&")                          #FOR MAC
         # winsound.PlaySound("bounce.wav", winsound.SND_ASYNC)  #FOR WINDOWS
 
 
@@ -145,7 +150,7 @@ while True:
     if (ball.xcor() < -340 and ball.xcor() > -350) and (ball.ycor() < paddle_a.ycor() + 50 and ball.ycor() > paddle_a.ycor() - 50):
         ball.setx(-340)
         ball.moveX*= -1
-        os.system("aplay bounce.wav&")
+        os.system("aplay bounce.wav&")                          #FOR LINUX
         # winsound.PlaySound("bounce.wav", winsound.SND_ASYNC)  #FOR WINDOWS
 
 
@@ -158,7 +163,7 @@ while True:
         window.exitonclick()
 
     if(score_b == 10):
-        os.system("aplay victory.wav&")
+        os.system("aplay victory.wav&")                          #FOR LINUX
         # winsound.PlaySound("victory.wav", winsound.SND_ASYNC)  #FOR WINDOWS
         pen.clear()
         pen.goto(0, 0)
