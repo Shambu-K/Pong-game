@@ -12,7 +12,7 @@ Made a basic version of the classic Pong game using **turtle** module in python
 * Make sure that you have python3 installed in your system
 
 * Install the tkinter module for python <br />
-      ```  pip install tkinter```
+      ```  pip install tk```
 
 * Clone this repository <br />
    ```  git clone https://github.com/Shambu-K/Pong-game.git```
