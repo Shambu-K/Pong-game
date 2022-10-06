@@ -22,6 +22,9 @@ For Linux : <br />
 * Run the python file <br />
    ```  python3 pong.py```
 
-* If you face issues while installing or you are a Windows user, you can simply run the executable named **game**
+* Alternatively, you can generate the executable by running the following commands <br />
+      ```  pip install pyinstaller``` <br />
+      ```  pyinstaller --onefile -w pong.py``` 
+* The executable created will be present in the **dist** directory. Copy it to the main(**Pong-game**) directory and launch it.
 
 
