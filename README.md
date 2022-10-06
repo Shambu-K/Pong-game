@@ -21,4 +21,6 @@ For Linux : <br />
 * Run the python file <br />
    ```  python3 pong.py```
 
+* If you face issues while installing or you are a Windows user, you can simply run the executable named **game**
+
 
