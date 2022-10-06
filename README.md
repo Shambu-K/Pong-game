@@ -25,6 +25,6 @@ For Linux : <br />
 * Alternatively, you can generate the executable by running the following commands <br />
       ```  pip install pyinstaller``` <br />
       ```  pyinstaller --onefile -w pong.py``` 
-* The executable created will be present in the **dist** directory. Copy it to the main(**Pong-game**) directory and launch it.
+* The executable created will be present in the **dist** directory. Copy it to the root(**Pong-game**) directory and launch it.
 
 
