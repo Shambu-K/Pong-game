@@ -1,6 +1,6 @@
 
 # Pong
-Made a basic version of the classic Pong game using **turtle** module in python
+Made a basic version of the classic Pong game using **turtle** module in python <br />
 ![img](ss.png "Game Still")
 
 ## Game instructions:
