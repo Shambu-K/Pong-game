@@ -1,6 +1,7 @@
 
 # Pong
 Made a basic version of the classic Pong game using **turtle** module in python
+![img](ss.png "Game Still")
 
 ## Game instructions:
 * Use **W** and **S** keys to control Player A
